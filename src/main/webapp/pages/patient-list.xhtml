@@ -1,0 +1,75 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templates/template-sistema.xhtml">
+
+	<ui:define name="content">
+
+		<h:form id="patientForm">
+
+			<p:growl id="messages" showDetail="true" life="4000" />
+
+			<p:panel header="Cadastro de Pacientes">
+
+				<p:panelGrid columns="2">
+
+					<p:outputLabel for="name" value="Nome:" />
+
+					<p:inputText id="name" value="#{patientBean.patient.fullName}"
+						required="true" requiredMessage="Nome é obrigatório">
+
+						<f:validateLength maximum="255" />
+
+					</p:inputText>
+
+					<p:outputLabel for="birth" value="Data de nascimento:" />
+
+					<p:datePicker id="birth" value="#{patientBean.patient.dateOfBirth}"
+						pattern="dd/MM/yyyy" required="true"
+						requiredMessage="Data de nascimento é obrigatória" />
+
+				</p:panelGrid>
+
+				<p:commandButton id="btnSalvar" value="Salvar" icon="pi pi-save"
+					action="#{patientBean.save}" process="@this name birth"
+					update="messages name birth patientTable" />
+
+			</p:panel>
+
+			<p:panel header="Lista de Pacientes" style="margin-top:20px">
+
+				<p:dataTable id="patientTable" value="#{patientBean.patients}"
+					var="patient" paginator="true" rows="5" selectionMode="single"
+					selection="#{patientBean.patient}" rowKey="#{patient.id}">
+
+					<p:column headerText="ID">
+						<h:outputText value="#{patient.id}" />
+					</p:column>
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{patient.fullName}" />
+					</p:column>
+
+					<p:column headerText="Nascimento">
+						<h:outputText value="#{patient.dateOfBirthFormatted}" />
+					</p:column>
+
+					<p:column headerText="Ações">
+
+						<p:commandButton value="Editar" icon="pi pi-pencil" id="editar"
+							action="#{patientBean.edit(patient)}" process="@this"
+							update="patientForm:name patientForm:birth patientForm:messages" />
+
+					</p:column>
+
+				</p:dataTable>
+
+			</p:panel>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
