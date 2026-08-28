@@ -5,7 +5,7 @@
 
 # Medicamento
 
-A Java EE (Jakarta EE 10) web application for managing medications, built with **JSF 4 (Jakarta Faces)**, **PrimeFaces**, **WildFly 37**, and **Maven**.
+Java 11, WildFly 24, JSF 3.0 (JakartaFaces), PrimeFaces 12 e JPA 3.0
 
 ## 📋 Features
 - JSF pages with Facelets templating
@@ -16,7 +16,9 @@ A Java EE (Jakarta EE 10) web application for managing medications, built with *
 
 ## 🚀 Requirements
 - **Java 11**
-- **Maven 3.8+**
+- **JSF 3.0 (JakartaFaces)**
+- **PrimeFaces 12**
+- **JPA 3.0**
 - **WildFly 24** (Jakarta EE 9.1)
 
 ## 📦 Project Configuration
@@ -35,12 +37,8 @@ This project is configured using Maven. Below are the key configurations from th
 - **Java Compiler Release**: `11`
 - **Source Encoding**: `UTF-8`
 
-### Dependencies
-- **Jakarta EE API**: 
-  ```xml
-  <dependency>
-      <groupId>jakarta.platform</groupId>
-      <artifactId>jakarta.jakartaee-api</artifactId>
-      <version>9.1.0</version>
-      <scope>provided</scope>
-  </dependency>
+## 💻 Acessar contexto
+- http://localhost:8080/medicamentos-app
+
+
+
