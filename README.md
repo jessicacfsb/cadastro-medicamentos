@@ -1,3 +1,8 @@
+# Evidências
+<img width="1915" height="938" alt="image" src="https://github.com/user-attachments/assets/c41d3bcf-9324-4416-bf3e-572ff2d4a14e" />
+
+<img width="1919" height="939" alt="image" src="https://github.com/user-attachments/assets/7ba5ce77-fa16-435d-9eac-c20d32d4f808" />
+
 # Medicamento
 
 A Java EE (Jakarta EE 10) web application for managing medications, built with **JSF 4 (Jakarta Faces)**, **PrimeFaces**, **WildFly 37**, and **Maven**.
