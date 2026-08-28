@@ -31,12 +31,10 @@ public class PatientService {
 	}
 
 	public Integer calculateAge(Long patientId) {
-		StoredProcedureQuery query = entityManager.createStoredProcedureQuery("P_PATIENT_AGE");
-		query.registerStoredProcedureParameter("p_patient_id", Long.class, ParameterMode.IN);
-		query.registerStoredProcedureParameter("p_age_years", Integer.class, ParameterMode.OUT);
-		query.setParameter("p_patient_id", patientId);
-		query.execute();
-		Object result = query.getOutputParameterValue("p_age_years");
+
+		Object result = entityManager.createNativeQuery("SELECT P_PATIENT_AGE(:patientId)")
+				.setParameter("patientId", patientId).getSingleResult();
+
 		return ((Number) result).intValue();
 	}
 

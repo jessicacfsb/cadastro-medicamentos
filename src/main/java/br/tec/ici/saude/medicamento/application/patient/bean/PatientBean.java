@@ -51,7 +51,7 @@ public class PatientBean implements Serializable {
 		}
 	}
 
-	public void calculateAge() {
+	public void calculateAge(Patient patient) {
 		try {
 			if (patient == null || patient.getId() == null) {
 				addMessage(FacesMessage.SEVERITY_WARN, "Atenção", "Selecione um paciente.");

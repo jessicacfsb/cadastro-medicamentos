@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
@@ -6,23 +7,20 @@
 	template="/templates/template-sistema.xhtml">
 
 	<ui:define name="content">
-
+		
 		<h:form id="patientForm">
 
 			<p:growl id="messages" showDetail="true" life="4000" />
 
-			<p:panel header="Cadastro de Pacientes">
+			<p:panel header="Cadastro de Pacientes" styleClass="cadastro-grid">
 
 				<p:panelGrid columns="2">
 
 					<p:outputLabel for="name" value="Nome:" />
 
 					<p:inputText id="name" value="#{patientBean.patient.fullName}"
-						required="true" requiredMessage="Nome é obrigatório">
-
-						<f:validateLength maximum="255" />
-
-					</p:inputText>
+						required="true" requiredMessage="Nome é obrigatório"
+						maxlength="255" />
 
 					<p:outputLabel for="birth" value="Data de nascimento:" />
 
@@ -32,8 +30,9 @@
 
 				</p:panelGrid>
 
-				<p:commandButton style="margin: 10px 0 0 344px" id="btnSalvar" value="Salvar" icon="pi pi-save"
-					action="#{patientBean.save}" process="@this name birth"
+				<p:commandButton id="btnSalvar" style="margin: 10px 0 0 344px"
+					value="Salvar" icon="pi pi-save"
+					actionListener="#{patientBean.save}" process="@this name birth"
 					update="messages name birth patientTable" />
 
 			</p:panel>
@@ -57,16 +56,34 @@
 					</p:column>
 
 					<p:column headerText="Ações">
+						<p:commandButton id="editar" value="Editar" icon="pi pi-pencil"
+							style="margin-right: 10px !important;" action="#{patientBean.edit(patient)}"
+							process="@this"
+							update=":patientForm:name :patientForm:birth :patientForm:messages" />
 
-						<p:commandButton value="Editar" icon="pi pi-pencil" id="editar"
-							action="#{patientBean.edit(patient)}" process="@this"
-							update="patientForm:name patientForm:birth patientForm:messages" />
+						<p:commandButton id="calcularIdade" value="Calcular idade"
+							icon="pi pi-calendar" style="margin-right: 10px !important;"
+							action="#{patientBean.calculateAge(patient)}" process="@this"
+							update=":patientForm:ageDialog"
+							oncomplete="PF('ageDialog').show();" />
 
 					</p:column>
 
 				</p:dataTable>
 
 			</p:panel>
+
+			<p:dialog id="ageDialog" widgetVar="ageDialog"
+				header="Idade do Paciente" modal="true" closable="true"
+				resizable="false">
+
+				<h:panelGroup id="ageContent">
+
+					<h2>Idade calculada: #{patientBean.calculatedAge} anos</h2>
+
+				</h:panelGroup>
+
+			</p:dialog>
 
 		</h:form>
 
