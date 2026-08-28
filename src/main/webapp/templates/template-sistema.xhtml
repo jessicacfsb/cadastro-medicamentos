@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Cadastro de Medicamento</title>
+
+	<h:outputStylesheet library="css" name="cadastro.css" />
+</h:head>
+
+<h:body>
+
+	<div class="container">
+
+		<div class="header">
+			<ui:insert name="header" />
+		</div>
+
+		<div class="content">
+			<ui:insert name="content" />
+		</div>
+
+		<div class="footer">
+			<ui:insert name="footer">
+				<ui:include src="/templates/footer.xhtml" />
+			</ui:insert>
+		</div>
+
+	</div>
+
+</h:body>
+
+</html>
