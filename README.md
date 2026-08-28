@@ -1,7 +1,10 @@
 # Evidências
+Tela Inicial:
 <img width="1915" height="938" alt="image" src="https://github.com/user-attachments/assets/c41d3bcf-9324-4416-bf3e-572ff2d4a14e" />
-
-<img width="1919" height="939" alt="image" src="https://github.com/user-attachments/assets/7ba5ce77-fa16-435d-9eac-c20d32d4f808" />
+Tela de Cadastro:
+<img width="1895" height="986" alt="image" src="https://github.com/user-attachments/assets/6ecc8d36-5db6-4800-92d0-fe2a5a123677" />
+Pop-up com idade calculada:
+<img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/7f18c86f-a39f-4b93-8d5b-bff300fd5b7c" />
 
 # Medicamento
 
