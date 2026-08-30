@@ -77,21 +77,4 @@ public class PatientServiceTest {
 
         verify(patientDao).save(patient);
     }
-
-    @Test
-    public void testCalculateAge() {
-        Long patientId = 1L;
-        int expectedAge = 30;
-
-        when(entityManager.createNativeQuery("SELECT P_PATIENT_AGE(:patientId)")).thenReturn(query);
-        when(query.setParameter("patientId", patientId)).thenReturn(query);
-        when(query.getSingleResult()).thenReturn(expectedAge);
-
-        Integer result = patientService.calculateAge(patientId);
-
-        assertEquals(expectedAge, result);
-        verify(entityManager).createNativeQuery("SELECT P_PATIENT_AGE(:patientId)");
-        verify(query).setParameter("patientId", patientId);
-        verify(query).getSingleResult();
-    }
 }

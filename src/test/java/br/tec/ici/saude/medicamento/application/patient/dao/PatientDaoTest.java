@@ -8,6 +8,7 @@ import java.util.List;
 
 import br.tec.ici.saude.medicamento.application.patient.entity.Patient;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -67,7 +68,7 @@ public class PatientDaoTest {
     @Test
     public void testSaveNewPatient() {
         Patient patient = new Patient();
-        patient.setId(null); // New patient
+        patient.setId(null);
 
         patientDao.save(patient);
 
@@ -77,7 +78,7 @@ public class PatientDaoTest {
     @Test
     public void testSaveExistingPatient() {
         Patient patient = new Patient();
-        patient.setId(1L); // Existing patient
+        patient.setId(1L);
 
         patientDao.save(patient);
 
@@ -95,5 +96,25 @@ public class PatientDaoTest {
         patientDao.delete(patient);
 
         verify(entityManager).remove(patient);
+    }
+
+    @Test
+    public void testCalculateAge() {
+        Long patientId = 1L;
+        Integer expectedAge = 30;
+
+        Query queryMock = mock(Query.class);
+        
+        when(entityManager.createNativeQuery("SELECT P_PATIENT_AGE(:patientId)")).thenReturn(queryMock);
+        when(queryMock.setParameter("patientId", patientId)).thenReturn(queryMock);
+        when(queryMock.getSingleResult()).thenReturn(expectedAge);
+
+        Integer actualAge = patientDao.calculateAge(patientId);
+
+        assertEquals(expectedAge, actualAge);
+
+        verify(entityManager).createNativeQuery("SELECT P_PATIENT_AGE(:patientId)");
+        verify(queryMock).setParameter("patientId", patientId);
+        verify(queryMock).getSingleResult();
     }
 }

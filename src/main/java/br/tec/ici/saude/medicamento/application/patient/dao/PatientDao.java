@@ -34,4 +34,11 @@ public class PatientDao {
 		entityManager.remove(managed);
 	}
 
+	public Integer calculateAge(Long patientId) {
+
+		Object result = entityManager.createNativeQuery("SELECT P_PATIENT_AGE(:patientId)")
+				.setParameter("patientId", patientId).getSingleResult();
+
+		return ((Number) result).intValue();
+	}
 }

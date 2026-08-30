@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="br.tec.ici.saude.medicamento.application.patient.service.PatientServiceTest" time="0.043" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="br.tec.ici.saude.medicamento.application.patient.service.PatientServiceTest" time="0.025" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.32.101-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\jessi\AppData\Local\Temp\surefire15560479565760751777\surefirebooter-20260828183238915_3.jar C:\Users\jessi\AppData\Local\Temp\surefire15560479565760751777 2026-08-28T18-32-38_794-jvmRun1 surefire-20260828183238915_1tmp surefire_0-20260828183238915_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\jessi\AppData\Local\Temp\surefire456213892327430902\surefirebooter-20260830181629042_3.jar C:\Users\jessi\AppData\Local\Temp\surefire456213892327430902 2026-08-30T18-16-28_898-jvmRun1 surefire-20260830181629042_1tmp surefire_0-20260830181629042_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\jessi\OneDrive\Desktop\Projeto\projeto_base\target\test-classes;C:\Users\jessi\OneDrive\Desktop\Projeto\projeto_base\target\classes;C:\Users\jessi\.m2\repository\jakarta\platform\jakarta.jakartaee-api\9.1.0\jakarta.jakartaee-api-9.1.0.jar;C:\Users\jessi\.m2\repository\org\primefaces\primefaces\12.0.0\primefaces-12.0.0-jakarta.jar;C:\Users\jessi\.m2\repository\org\projectlombok\lombok\1.18.32\lombok-1.18.32.jar;C:\Users\jessi\.m2\repository\com\h2database\h2\1.4.197\h2-1.4.197.jar;C:\Users\jessi\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\jessi\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\jessi\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\jessi\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\jessi\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\jessi\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\jessi\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\jessi\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\jessi\.m2\repository\org\mockito\mockito-core\4.0.0\mockito-core-4.0.0.jar;C:\Users\jessi\.m2\repository\net\bytebuddy\byte-buddy\1.11.19\byte-buddy-1.11.19.jar;C:\Users\jessi\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.19\byte-buddy-agent-1.11.19.jar;C:\Users\jessi\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\jessi\AppData\Local\Temp\surefire15560479565760751777\surefirebooter-20260828183238915_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\jessi\AppData\Local\Temp\surefire456213892327430902\surefirebooter-20260830181629042_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.32.1+1"/>
@@ -54,7 +54,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.32.101-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/jessi/OneDrive/Desktop/Projeto/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.9.v20251105-0741/jre/bin/server;C:/Users/jessi/OneDrive/Desktop/Projeto/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.9.v20251105-0741/jre/bin;C:\Program Files\Eclipse Adoptium\jdk-11.0.32.101-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\jessi\AppData\Local\Microsoft\WindowsApps;C:\Users\jessi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\jessi\AppData\Roaming\npm;C:\Users\jessi\OneDrive\Desktop\Projeto\eclipse;;."/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.32.101-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/jessi/OneDrive/Desktop/Projeto/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.9.v20251105-0741/jre/bin/server;C:/Users/jessi/OneDrive/Desktop/Projeto/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.9.v20251105-0741/jre/bin;C:\Program Files\Eclipse Adoptium\jdk-11.0.32.101-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\jessi\AppData\Local\Microsoft\WindowsApps;C:\Users\jessi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\jessi\AppData\Roaming\npm;C:\Users\jessi\AppData\Local\GitHubDesktop\bin;C:\Users\jessi\OneDrive\Desktop\Projeto\eclipse;;."/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Eclipse Adoptium"/>
     <property name="java.vm.version" value="11.0.32.1+1"/>
@@ -62,8 +62,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testFindAll" classname="br.tec.ici.saude.medicamento.application.patient.service.PatientServiceTest" time="0.035"/>
+  <testcase name="testFindAll" classname="br.tec.ici.saude.medicamento.application.patient.service.PatientServiceTest" time="0.018"/>
   <testcase name="testSave" classname="br.tec.ici.saude.medicamento.application.patient.service.PatientServiceTest" time="0.001"/>
   <testcase name="testFindById" classname="br.tec.ici.saude.medicamento.application.patient.service.PatientServiceTest" time="0.001"/>
-  <testcase name="testCalculateAge" classname="br.tec.ici.saude.medicamento.application.patient.service.PatientServiceTest" time="0.003"/>
 </testsuite>
